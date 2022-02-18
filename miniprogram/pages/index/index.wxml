@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<view>
+  
+  <swiper autoplay="{{autoplay}}" circular="true" class="activity-competition" duration="{{duration}}" indicatorActiveColor="#40CECE" indicatorColor="white" indicatorDots="true" interval="{{interval}}">
+        <swiper-item bindtap="Navigate" data-id="{{item.id}}" wx:for="{{contestRecommend}}" wx:key="unique">
+            <image class="slide-image" src="{{item.url}}"></image>
+        </swiper-item>
+    </swiper>
+  <view class="page-body">
+    <view class="btn-area" id="buttonContainer">
+      <view class="button-sp-area">
+        <button type="default" plain="true">
+          <navigator style='font-weight: bold' url='/pages/people/people' open-type="navigate" hover-class='nav-hover' class="nav-default">招募队友</navigator>
+        </button>
+        <button type="default" plain="true">
+          <navigator style='font-weight: bold' url='/pages/team/team' open-type="navigate" hover-class='nav-hover' class="nav-default">寻找队伍</navigator>
+        </button>
+        <button type="default">
+          <navigator style='font-weight: bold' url='/pages/contest/contest' open-type="navigate" hover-class='nav-hover' class="nav-default">竞赛信息总览</navigator>
+        </button>
+      </view>
+    </view>
+  </view>
+
+</view>
