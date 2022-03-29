@@ -1,0 +1,45 @@
+Page({
+  data:{
+    thisPeopleList:[
+    {
+      imagePath:"/images/head.png",
+      name:"姓名",
+      introduction:"个人简介",
+      aspiration:"意愿",
+      contact:"联系方式",
+      isAlreadyHave:true,
+      id:0
+    },
+    {
+      imagePath:"/images/head.png",
+      name:"刘",
+      introduction:"男",
+      aspiration:"抱大腿",
+      contact:"520",
+      isAlreadyHave:true,
+      id:1
+    },
+    {
+      imagePath:"/images/head.png",
+      name:"严",
+      introduction:"女",
+      aspiration:"带学弟",
+      contact:"521",
+      isAlreadyHave:true,
+      id:2
+    }
+  ]
+  },
+  f0:function(event){
+    var peopleId = event.currentTarget.dataset.peopleId
+    console.log(peopleId);
+    wx.navigateTo({
+      url:"/pages/detail/detail?id" + peopleId
+    })
+  },
+  onShareAppMessage: function(){
+    return{
+      title:"招募队友"
+    }
+  }
+})
