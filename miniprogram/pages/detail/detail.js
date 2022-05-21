@@ -7,7 +7,6 @@ Page({
     ]
   },
   onLoad: function (options){
-//    console.log(options.id)
     this.setData({
       mid: options.id
     })
