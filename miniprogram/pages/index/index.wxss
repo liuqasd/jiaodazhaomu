@@ -1,0 +1,20 @@
+/**index.wxss**/
+
+page {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.image-swipe{
+  height: 40vh;
+}
+.image-card{
+  height: 90%;
+  width: 100%;
+  background: #ff99cc;
+  margin: 20rpx;
+  position: relative;
+  color: #ffffff;
+}
