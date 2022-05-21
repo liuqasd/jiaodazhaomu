@@ -1,0 +1,29 @@
+<!--index.wxml-->
+<view>
+  <swiper class="activity-competition" indicator-dots="{{true}}" 	indicator-color="#F5F5F5" indicator-active-color="#ff99cc" previous-margin="50rpx" next-margin="50rpx" current="{{currentIndex}}" autoplay="{{autoplay}}" circular="true" duration="{{duration}}" interval="{{interval}}">
+      <swiper-item bindtap="Navigate" style="background:#eee; height: 260px" wx:for="{{thisCompetitionList}}" wx:key="unique">
+        <view class="container image-card">
+          <text>{{item.name}}</text>
+          <image src='{{item.imagePath}}'></image>
+        </view>
+      </swiper-item>
+  </swiper>
+
+  <view class="page-body">
+    <view class="btn-area" id="buttonContainer">
+      <view class="button-sp-area">
+        <button type="default" plain="true">
+          <navigator style='font-weight: bold' url='/pages/people/people' open-type="navigate" hover-class='nav-hover' class="nav-default">招募队友</navigator>
+        </button>
+        <button type="default" plain="true">
+          <navigator style='font-weight: bold' url='/pages/team/team' open-type="navigate" hover-class='nav-hover' class="nav-default">寻找队伍</navigator>
+        </button>
+        <button type="default">
+          <navigator style='font-weight: bold' url='/pages/contest/contest' open-type="navigate" hover-class='nav-hover' class="nav-default">竞赛信息总览</navigator>
+        </button>
+      </view>
+    </view>
+  </view>
+  
+  <button class="userinfo-nickname" bindtap="onGetOpenid">点击获取 openid</button>
+</view>
